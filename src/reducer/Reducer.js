@@ -11,6 +11,7 @@ const Reducer = (state=initState, action) => {
             action.payload.id = Math.random(); //use uuid if you want
             action.payload.isDone = false;
             return {
+                //inmutable
                 ...state,
                 toDoList: [...state.toDoList, action.payload]
             };
